@@ -29,7 +29,7 @@ html{
     --black-color: black;
 }
 section{
-    height: 80vh;
+    height: 60vh;
     padding: 2rem 0;
 }
 section:nth-child(odd){
@@ -105,17 +105,29 @@ slider
     height: 100%; 
     object-fit: cover;
 } 
+
+#slider .swiper .swiper-button-next,
+#slider .swiper .swiper-button-prev{
+color: var(--secondary-color);
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap,4px);
+    background: var(--secondary-color);
+
+} 
+
 #sponsors{
     height: 30vh;
 }
 #sponsors img{
-    width: 7%;
-    height: 7%;
+    width: 6%;
+    height: 6%;
     filter: grayscale(100%);
 }
 #sponsors img:hover{
-    width: 7%;
-    height: 7%;
+    width: 6%;
+    height: 6%;
     filter: grayscale(0%);
 }
 #sponsors .sponsors{
@@ -124,8 +136,7 @@ slider
 }
 /* courses  */
 #courses{
-    height: 100vh;
-
+    height: 80vh;
 }
 #courses .grid{
      display: grid; 
@@ -135,11 +146,69 @@ slider
 
 #courses .grid .card{
     height: 30vh;
-    border-radius: .4rem;
+    border-radius: .3rem;
     text-align: center;
-    box-shadow: 0 .2rem .3rem var(--black-color);
-    padding: 1rem .9rem;
-}    
+    box-shadow: 0 .3rem .4rem var(--black-color);
+    padding: 1rem .8rem;
+    position: relative;
+} 
+#courses .grid .icon{
+    font-size: 3rem;
+    color: var(--secondary-color);
+}
+#courses .grid .card h5{
+    font-size: 1.3rem;
+}   
+#courses .grid .card .star i{
+    color: var(--secondary-color);
+}      
+#courses .grid .card .star i:last-child{
+    color: var(--black-color);
+}
+#courses .grid .card .rating{
+    color: var(--white-color);
+    background: var(--secondary-color);
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+
+}
+#about{
+    height: 30vh;
+    text-align: center;
+}
+#about .btn{
+    background: var(--secondary-color);
+    color: var(--black-color);
+    text-align: center;
+    border-radius: 2rem;
+    padding: .5rem .5rem;
+    text-align: center;
+    border: none;
+}
+
+.footer{
+    background: var(--light-white);
+    height: 50vh;
+}
+.footer table td{
+    padding: .2rem .8rem;
+}
+.footer h5{
+    color: var(--black-color);
+    text-align: center !important;
+}
+.footer i{
+    text-align: center !important;
+    color: var(--secondary-color);
+}
+.footer p{
+    color: var(--white-color);
+}
 
 
 
@@ -158,10 +227,11 @@ slider
 
 @media only screen and (max-width:502px){
 #navbar{
+    height: 25vh;
     display: flex;
-    height: 15vh;
     flex-direction: column;
 }
+
 #navbar .logo{
     color: var(--white-color);
     font-size: 2rem;
@@ -169,58 +239,56 @@ slider
     
 }
 #navbar .logo>span{
+    text-shadow: none;
     color: var(--white-color);
 }
 
 #navbar ul li{
     display: inline;
-    padding: 0 1rem;
+    padding: 0 .7rem;
 }
 #navbar ul li a{
     color: var(--white-color);
 }
 #navbar ul li a:hover{
     color: var(--white-color);
-    font-size: .7rem;
+    font-size: .1rem;
 }
 #navbar .btn{
     display: none;
 }
 
-/* slider  */
+/* slider */
 #slider{
-    width: 55vh;
+    height: 55vh;
     padding: 0;
-    /* background-size: cover; */
- }
- 
- #slider .swiper{
-     height: 100%;
-     /* background-size: cover; */
- }
- #slider .swiper-slide img{
-     width: 100%;
-     display: block;
-     height: 100%; 
-     object-fit: cover; 
-     /* background-size: cover; */
- }
+}
 #sponsors{
     height: 20vh;
 }
-#sponsors img{
-    width: 7%;
-    height: 7%;
-    filter: grayscale(100%);
+
+#courses{
+    height: auto;
 }
-#sponsors img:hover{
-    width: 7%;
-    height: 7%;
-    filter: grayscale(0%);
-}
-#sponsors .sponsors{
-    display: flex;
-    justify-content: space-between;
-}
+#courses .grid{
+     display: grid; 
+     grid-template-columns: 1fr;
+     gap: 1rem;   
+}  
+
+#courses .grid .card{
+    height: 40vh;
+    border-radius: .3rem;
+    text-align: center;
+    box-shadow: 0 .3rem .4rem var(--black-color);
+    padding: 1rem .8rem;
+    position: relative;
+} 
+
+
+  
+
+ 
+
 }
 
