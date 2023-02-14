@@ -234,7 +234,7 @@ color: var(--secondary-color);
 #navbar .logo{
     color: var(--white-color);
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 900;
     
 }
 #navbar .logo>span{
